@@ -2,24 +2,147 @@
 // Component Imports
 import Button from "../components/Button.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-
+import Animated from "../components/checkboxes/digital_display/Animated.astro";
+import Intelligent from "../components/checkboxes/digital_display/Intelligent.astro";
+import Static from "../components/checkboxes/digital_display/Static.astro";
+import Video from "../components/checkboxes/digital_display/Video.astro";
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <MainLayout title="hej">
-  <div class="grid place-items-center h-screen content-center">
-    <div data-netlify-identity-menu></div>
-    <div data-netlify-identity-button>Login with Netlify Identity</div>
-    <Button>Tailwind Button in Astro!</Button>
-    <a href="/markdown-page" class="p-4 underline"
-      >Markdown is also supported...</a
+  <section
+    class="grid w-full h-screen bg-gradient-to-r from-black to-slate-800 col-start-1 col-end-9"
+    id="hero"
+  >
+    <div
+      class="hero_text z-40 flex flex-col w-full h-screen pb-10 justify-center text-white items-center"
     >
-    <a
-      class="px-5 py-2 outline outline-gray-600 bg-slate-200 rounded-2xl"
-      href="/newpage.html"
-    >
-      hej</a
-    >
+      <div class="hero_text_wrapper w-[500px] text-center flex flex-col gap-5">
+        <h1 class="font-bold1 hero_h1 tracking-tighter">
+          production<span class="text-orange-400">.</span>
+        </h1>
+        <h2 class="font-book hero_h2">
+          Here you’ll find the production teams’ best work. Filter through, and
+          share what you like.
+        </h2>
+        <div><Button>Take me to the archive!</Button></div>
+      </div>
+    </div>
+    <div class="imgs_front z-10 2xl:container 2xl:mx-auto 2xl:relative">
+      <img src="/images/front1.png" class="absolute bottom-0 left-0" alt="" />
+      <img src="/images/front2.png" class="absolute bottom-0 left-0" alt="" />
+      <img src="/images/front5.png" class="absolute bottom-0 left-0" alt="" />
+      <img src="/images/front6.png" class="absolute bottom-0 left-0" alt="" />
+      <img src="/images/front7.png" class="absolute bottom-0 left-0" alt="" />
+      <img src="/images/front8.png" class="absolute bottom-0 left-0" alt="" />
+      <img src="/images/front9.png" class="absolute bottom-0 left-0" alt="" />
+      <img src="/images/front10.png" class="absolute bottom-0 left-0" alt="" />
+      <img src="/images/front11.png" class="absolute bottom-0 left-0" alt="" />
+    </div>
+    <div class="background z-20">
+      <div class="custom-shape-divider-bottom-1694695021">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
+    </div>
+    <!-- <div class="background z-20">
+    <img
+      src="/images/background.svg"
+      class="w-screen h-auto absolute bottom-0 left-0"
+      alt=""
+    />
+  </div> -->
+    <div class="imgs_behind z-30 2xl:container 2xl:relative 2xl:mx-auto">
+      <img src="/images/front3.png" class="absolute bottom-0 left-0" alt="" />
+      <img src="/images/front4.png" class="absolute bottom-0 left-0" alt="" />
+      <img src="/images/behind1.png" class="absolute bottom-0 left-0" alt="" />
+      <img src="/images/behind2.png" class="absolute bottom-0 left-0" alt="" />
+      <img src="/images/behind3.png" class="absolute bottom-0 left-0" alt="" />
+    </div>
+  </section>
+
+  <div id="main" class="col-start-2 col-end-8">
+    <section id="what_we_do" class="h-auto grid w-full justify-center mt-24">
+      <div
+        class="what_we_do_container flex border-4 border-slate-600 tracking-tighter bg-white z-50 border-dashed max-w-[600px] h-auto p-8 text-[22px] font-regular"
+      >
+        <div
+          class="what_we_do_categories flex h-full items-center justify-center leading-7"
+        >
+          <div class="flex flex-wrap gap-4 max-h-fit">
+            <div>Print</div>
+            <div>Motion graphics</div>
+            <div>Display banners</div>
+            <div>Video & Sound</div>
+            <div>Copywriting</div>
+            <div>OOH</div>
+            <div>Snapchat lenses</div>
+            <div>Organic SoMe</div>
+            <div>3D</div>
+            <div>Art direction</div>
+          </div>
+        </div>
+        <div
+          class="what_do_we_do_title font-bold1 text-[45px] leading-none text-right"
+        >
+          what <br /> do <br /> we <br /> do?
+        </div>
+      </div>
+    </section>
+    <section id="archive" class="mt-36 mb-36">
+      <section id="digital_display" class="">
+        <div
+          class="w-full flex justify-center border-b-4 border-dashed border-black"
+        >
+          <div class="filter_and_text gap-6 flex pb-6 w-fit">
+            <div
+              class="digital_display_col1 text-right flex flex-col items-end justify-end"
+            >
+              <h2 class="font-bold1 flex w-fit text-[64px] tracking-tighter">
+                Digital display
+              </h2>
+              <div
+                class="digital_display_categories font-bold1 text-xl tracking-tight flex flex-wrap justify-end w-fit"
+              >
+                <Static />
+                <Animated />
+                <Video />
+                <Intelligent />
+              </div>
+            </div>
+            <div
+              class="digital_display_col2 flex justify-start items-end gap-2 w-fit"
+            >
+              <p class="font-book text-[1rem] leading-tight max-w-[550px]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                faucibus tincidunt cursus. Vestibulum sed purus eu odio
+                elementum tincidunt. Nullam sit amet ullamcorper dui, molestie
+                volutpat magna. Suspendisse et ipsum et sapien eleifend
+                bibendum. Quisque fermentum velit eget gravida ornare.
+                Vestibulum ac nulla viverra, interdum odio at, cursus ex. Sed
+                venenatis sodales turpis, id pharetra lorem tincidunt venenatis.
+              </p>
+
+              <a href="#" class="w-full">
+                <img
+                  src="/images/checklist.svg"
+                  class="hover:scale-105 opacity-70 hover:opacity-100 transition-all ease-in-out max-w-[85px] h-auto"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
   </div>
 </MainLayout>

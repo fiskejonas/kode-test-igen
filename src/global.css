@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Georgia1;
+  src: url("fonts/georgia.woff2") format("woff");
+}
+
+@font-face {
+  font-family: Helvetica1;
+  src: url("fonts/helvetica.woff2") format("woff");
+}
+
+@font-face {
+  font-family: Helvetica2;
+  src: url("fonts/helvetica2.woff2") format("woff");
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.hero_h1 {
+  font-size: clamp(2rem, 0.6576rem + 5.7277vw, 5.8125rem);
+}
+
+.hero_h2 {
+  font-size: clamp(1.125rem, 1.037rem + 0.3756vw, 1.375rem);
+}
+
+.imgs_front .absolute {
+  animation-name: moveUpDown;
+  animation-duration: 7s;
+  animation-timing-function: cubic-bezier(0.67, 0.02, 0.33, 0.97);
+  animation-iteration-count: infinite;
+}
+
+.imgs_front img:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.imgs_front img:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+
+.imgs_front img:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+
+.imgs_front img:nth-of-type(4) {
+  animation-delay: 0.9s;
+}
+
+.imgs_front img:nth-of-type(5) {
+  animation-delay: 1.2s;
+}
+
+.imgs_front img:nth-of-type(6) {
+  animation-delay: 1.5s;
+}
+
+.imgs_front img:nth-of-type(7) {
+  animation-delay: 0.7s;
+}
+
+.imgs_front img:nth-of-type(8) {
+  animation-delay: 1.8s;
+}
+
+.imgs_front img:nth-of-type(9) {
+  animation-delay: 2.1s;
+}
+
+.imgs_front img:nth-of-type(10) {
+  animation-delay: 1s;
+}
+
+.imgs_front img:nth-of-type(11) {
+  animation-delay: 1.1s;
+}
+
+.imgs_behind .absolute {
+  animation-name: moveUpDown;
+  animation-duration: 7s;
+  animation-timing-function: cubic-bezier(0.67, 0.02, 0.33, 0.97);
+  animation-iteration-count: infinite;
+}
+
+.imgs_behind img:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.imgs_behind img:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+
+.imgs_behind img:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+
+.custom-shape-divider-bottom-1694695021 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1694695021 svg {
+  position: relative;
+  display: block;
+  width: calc(300% + 1.3px);
+  height: 177px;
+}
+
+.custom-shape-divider-bottom-1694695021 .shape-fill {
+  fill: #ffffff;
+}
