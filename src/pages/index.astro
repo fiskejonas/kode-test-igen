@@ -6,6 +6,7 @@ import Animated from "../components/checkboxes/digital_display/Animated.astro";
 import Intelligent from "../components/checkboxes/digital_display/Intelligent.astro";
 import Static from "../components/checkboxes/digital_display/Static.astro";
 import Video from "../components/checkboxes/digital_display/Video.astro";
+import BannerCard from "../components/BannerCard.astro";
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -100,18 +101,29 @@ import Video from "../components/checkboxes/digital_display/Video.astro";
     </section>
     <section id="archive" class="mt-36 mb-36">
       <section id="digital_display" class="">
-        <div
-          class="w-full flex justify-center border-b-4 border-dashed border-black"
-        >
-          <div class="filter_and_text gap-6 flex pb-6 w-fit">
+        <div class="w-full flex border-b-4 border-dashed border-black">
+          <div
+            class="filter_and_text gap-6 flex pb-6 lg:flex-row w-fit flex-col"
+          >
             <div
-              class="digital_display_col1 text-right flex flex-col items-end justify-end"
+              class="digital_display_col1 flex flex-col items-center justify-center lg:items-end lg:justify-end"
             >
-              <h2 class="font-bold1 flex w-fit text-[64px] tracking-tighter">
-                Digital display
-              </h2>
               <div
-                class="digital_display_categories font-bold1 text-xl tracking-tight flex flex-wrap justify-end w-fit"
+                class="flex justify-center lg:justify-end items-end w-full gap-4"
+              >
+                <h2 class="font-bold1 flex w-fit text-[64px] tracking-tighter">
+                  Digital display
+                </h2>
+                <a href="#" class="w-fit lg:hidden block">
+                  <img
+                    src="/images/checklist.svg"
+                    class="hover:scale-105 opacity-70 hover:opacity-100 transition-all ease-in-out max-w-[85px] h-auto"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="digital_display_categories font-bold1 text-xl tracking-tight flex justify-center flex-wrap lg:justify-end w-fit"
               >
                 <Static />
                 <Animated />
@@ -120,9 +132,11 @@ import Video from "../components/checkboxes/digital_display/Video.astro";
               </div>
             </div>
             <div
-              class="digital_display_col2 flex justify-start items-end gap-2 w-fit"
+              class="digital_display_col2 flex lg:justify-start justify-center items-center lg:items-end gap-2 w-full lg:w-fit"
             >
-              <p class="font-book text-[1rem] leading-tight max-w-[550px]">
+              <p
+                class="font-book text-[1rem] text-center lg:text-left leading-tight max-w-[550px]"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                 faucibus tincidunt cursus. Vestibulum sed purus eu odio
                 elementum tincidunt. Nullam sit amet ullamcorper dui, molestie
@@ -132,7 +146,7 @@ import Video from "../components/checkboxes/digital_display/Video.astro";
                 venenatis sodales turpis, id pharetra lorem tincidunt venenatis.
               </p>
 
-              <a href="#" class="w-full">
+              <a href="#" class="w-full hidden lg:block">
                 <img
                   src="/images/checklist.svg"
                   class="hover:scale-105 opacity-70 hover:opacity-100 transition-all ease-in-out max-w-[85px] h-auto"
@@ -141,6 +155,9 @@ import Video from "../components/checkboxes/digital_display/Video.astro";
               </a>
             </div>
           </div>
+        </div>
+        <div class="digital_display_content_container w-full h-auto">
+          <BannerCard />
         </div>
       </section>
     </section>
