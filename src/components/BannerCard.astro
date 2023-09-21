@@ -1,16 +1,26 @@
+---
+import Button from "./Button.astro";
+---
+
 <div
-  class="banner_card_container bg-slate-200 rounded-2xl max-w-[400px] flex flex-col h-auto overflow-hidden"
+  class="banner_card_container shadow-lg bg-slate-200 rounded-2xl max-w-[500px] flex flex-col overflow-hidden"
 >
   <iframe
     src="https://wmcontent.dk/_HighImpact/Armani_Code/Armani_Code_HI/index.html?id=5"
     frameborder="0"
-    class="flex grow-1 h-auto rounded-2xl"
+    class="flex grow-1 h-auto rounded-2xl shadow-lg"
   >
   </iframe>
-  <div class="text p-2">
-    <h4 class="banner_title">Title</h4>
-    <p class="banner_description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, minus?
-    </p>
+  <div class="banner_text p-4">
+    <h4 class="banner_title font-bold1 text-[22px]">Title</h4>
+    <div class="description_and_btn content-end gap-2 grid grid-flow-col">
+      <p class="banner_description font-book text-[1rem]">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,
+        minus?
+      </p>
+      <div class="top_and_mid_btn w-fit flex items-end">
+        <Button>Top and midscroll</Button>
+      </div>
+    </div>
   </div>
 </div>

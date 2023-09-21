@@ -13,17 +13,19 @@ import BannerCard from "../components/BannerCard.astro";
 
 <MainLayout title="hej">
   <section
-    class="grid w-full h-screen bg-gradient-to-r from-black to-slate-800 col-start-1 col-end-9"
+    class="grid w-full bg-gradient-to-r from-black content-center to-slate-800 col-start-1 col-end-9"
     id="hero"
   >
     <div
-      class="hero_text z-40 flex flex-col w-full h-screen pb-10 justify-center text-white items-center"
+      class="hero_text z-40 flex flex-col w-full h-full pb-10 justify-center text-white items-center"
     >
-      <div class="hero_text_wrapper w-[500px] text-center flex flex-col gap-5">
+      <div
+        class="hero_text_wrapper max-w-[500px] text-center flex items-center flex-col gap-5"
+      >
         <h1 class="font-bold1 hero_h1 tracking-tighter">
           production<span class="text-orange-400">.</span>
         </h1>
-        <h2 class="font-book hero_h2">
+        <h2 class="font-book hero_h2 flex p-3">
           Here you’ll find the production teams’ best work. Filter through, and
           share what you like.
         </h2>
@@ -101,7 +103,7 @@ import BannerCard from "../components/BannerCard.astro";
     </section>
     <section id="archive" class="mt-36 mb-36">
       <section id="digital_display" class="">
-        <div class="w-full flex border-b-4 border-dashed border-black">
+        <div class="w-full flex border-b-4 border-dashed border-black mb-6">
           <div
             class="filter_and_text gap-6 flex pb-6 lg:flex-row w-fit flex-col"
           >

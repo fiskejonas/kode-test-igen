@@ -27,8 +27,13 @@
   }
 }
 
+#hero {
+  height: 85dvh;
+  position: relative;
+}
+
 .hero_h1 {
-  font-size: clamp(2rem, 0.6576rem + 5.7277vw, 5.8125rem);
+  font-size: clamp(4rem, 0.6576rem + 5.7277vw, 5.8125rem);
 }
 
 .hero_h2 {
@@ -124,4 +129,13 @@
 
 .custom-shape-divider-bottom-1694695021 .shape-fill {
   fill: #ffffff;
+}
+
+.banner_text {
+  max-height: 0px;
+  transition: 0.2s ease-in-out;
+}
+
+.banner_card_container:hover .banner_text {
+  max-height: 700px;
 }
