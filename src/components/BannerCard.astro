@@ -2,8 +2,19 @@
 import Button from "./Button.astro";
 ---
 
+<style>
+  .banner_title {
+    opacity: 0.3;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .banner_card_container:hover .banner_title {
+    opacity: 1;
+  }
+</style>
+
 <div
-  class="banner_card_container shadow-lg bg-slate-200 rounded-2xl max-w-[500px] flex flex-col overflow-hidden"
+  class="banner_card_container hover:shadow-lg shadow-sm bg-slate-200 rounded-2xl max-w-[500px] flex flex-col overflow-hidden"
 >
   <iframe
     src="https://wmcontent.dk/_HighImpact/Armani_Code/Armani_Code_HI/index.html?id=5"
